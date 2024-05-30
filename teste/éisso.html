@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="éisso.css">
+    <title>éisso</title>
+</head>
+<body>
+
+    <style>
+        body{
+            background-color: red;
+        }
+
+    .painel{
+        margin: auto;
+        background-color: white;
+        width: 500px;
+        height: 500px;
+        border-radius: 20px;
+        text-align: center;
+        padding-top: 50px;
+        font-family: 'franklin Gothic medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #Sim{
+        height: 40px;
+        width: 60px;
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-left: -60px;
+      }
+       #Não{
+        position: absolute;
+        height: 40px;
+        width: 60px;
+        background-color: red;
+        border: white;
+        border-radius: 10px;
+        color: white;
+        margin-left: 10px;
+      }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+
+         <h1>feliz dia dos namoreidous</h1>
+
+         <img src="https://gifs.eco.br/wp-content/uploads/2022/07/gifs-de-ursinhos-apaixonados-20.gif" alt="">
+
+         <h2>aceita namorar comigo? </h2>
+
+     <a href="https://youtu.be/aO9KoEaEkMg"><button id="Sim"> Sim </button></a>
+     <button onclicks="fuja()" id="nao"> Não </button>
+
+    </div> 
+
+    <script>
+       function fuja(){
+        var botaoNao = document.getElementById("nao")
+
+        var larguraJanela = window.innerWidth;
+        var alturaJanela = window.innerHeight;
+
+        var maxX = larguraJanela - botaoNao.offsetwidth;
+        var maxY = alturaJanela - botaoNao.offsetheight;
+
+        var aleatorioX = Math.floor(Math.random() * maxX);
+        var aleatorioY = Math.floor(Math.random() * maxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
+
+
+       } 
+    </script>
+
+    
+    
+</body>
+</html>
